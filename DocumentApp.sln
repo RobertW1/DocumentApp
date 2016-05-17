@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentApp", "DocumentApp\DocumentApp.csproj", "{FB558C61-26D7-4A70-B38E-53E1B564CD26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentAppWeb", "DocumentAppWeb\DocumentAppWeb.csproj", "{6D37A557-A96F-436F-9E8F-97C54E28D939}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB558C61-26D7-4A70-B38E-53E1B564CD26}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6D37A557-A96F-436F-9E8F-97C54E28D939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D37A557-A96F-436F-9E8F-97C54E28D939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D37A557-A96F-436F-9E8F-97C54E28D939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D37A557-A96F-436F-9E8F-97C54E28D939}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

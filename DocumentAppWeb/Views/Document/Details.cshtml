@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DocumentAppWeb.Models.Document>
+
+@{
+    ViewBag.Title = "Documents";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">Documents</div>
+
+    <div class="panel-body">
+        <table class="table table-striped">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Author)</th>
+                <th>@Html.DisplayNameFor(model => model.ModifiedBy)</th>
+                <th>@Html.DisplayNameFor(model => model.CreatedDate)</th>
+                <th>@Html.DisplayNameFor(model => model.ModifiedDate)</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ModifiedBy)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CreatedDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ModifiedDate)</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

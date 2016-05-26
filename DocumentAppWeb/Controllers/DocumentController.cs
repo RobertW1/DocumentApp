@@ -29,7 +29,7 @@ namespace DocumentAppWeb.Controllers
             {
                 ViewBag.LibraryTitle = libraryTitle;
                 var vm = DocumentHelper.GetSharedDocumentsInLibrary(context, libraryTitle, searchString);
-                return View("Details", vm);
+                return View("SharedDocuments", vm);
             }
         }
 
@@ -43,7 +43,7 @@ namespace DocumentAppWeb.Controllers
             }
         }
 
-        public ActionResult Details(string libraryTitle, string folderPath)
+        public ActionResult SharedDocuments(string libraryTitle, string folderPath)
         {
             using (var context = ContextProvider.CreateAppOnlyContext())
             {               

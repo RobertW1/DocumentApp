@@ -291,7 +291,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Document\Details.cshtml" />
+    <Content Include="Views\Document\SharedDocuments.cshtml" />
     <Content Include="Views\Document\AllDocuments.cshtml" />
     <Content Include="Views\Document\ListItemAdmin.cshtml" />
     <Content Include="Views\Document\ListItem.cshtml" />

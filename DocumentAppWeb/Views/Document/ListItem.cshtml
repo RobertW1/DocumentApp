@@ -9,7 +9,7 @@
     else if (Model.ContentType == "Folder")
     {
         <td>
-            @Html.ActionLink(Model.Name, "Details", new { libraryTitle = Model.LibraryTitle, folderPath = Model.Path })
+            @Html.ActionLink(Model.Name, "SharedDocuments", new { libraryTitle = Model.LibraryTitle, folderPath = Model.Path })
         </td>
     }
     else

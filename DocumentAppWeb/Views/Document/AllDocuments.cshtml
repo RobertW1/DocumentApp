@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<DocumentAppWeb.Models.ListItemVM>
 
 @{
-    ViewBag.Title = "Shared Documents";
+    ViewBag.Title = "All Documents";
 }
 
 <div class="panel panel-default">
     <div>
         <div class="panel-heading clearfix">
-            <h3 class="panel-title pull-left">Shared Documents</h3>
-            @using (Html.BeginForm("Search", "Document", FormMethod.Get, new { @class = "navbar-form pull-right" }))
+            <h3 class="panel-title pull-left">All Documents</h3>
+            @using (Html.BeginForm("SearchAllDocuments", "Document", FormMethod.Get, new { @class = "navbar-form pull-right" }))
             {
                 <div class="input-group">
                     <input type="hidden" name="SPHostUrl" value="@ViewBag.SPHostUrl" />
@@ -32,12 +32,13 @@
                         <th>@Html.DisplayNameFor(model => model.ModifiedBy)</th>
                         <th>@Html.DisplayNameFor(model => model.CreatedDate)</th>
                         <th>@Html.DisplayNameFor(model => model.ModifiedDate)</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        @Html.Partial("ListItem", item)
+                        @Html.Partial("ListItemAdmin", item)
                     }
                 </tbody>
             </table>

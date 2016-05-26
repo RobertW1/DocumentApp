@@ -1,0 +1,53 @@
+﻿@model DocumentAppWeb.Models.ListItemVM
+
+<tr id="@Model.Id">
+    <td class="text-center"><img width="16" height="16" src="@Url.Content(Model.Icon)" title="@Model.FileName" /></td>
+    @if (Model.IsSharedWithGuest)
+    {
+        <td><a href="@(Model.EditLink ?? Model.ViewLink)" target="_blank">@Model.Name</a></td>
+    }
+    else if (Model.ContentType == "Folder")
+    {
+        <td>
+            @Html.ActionLink(Model.Name, "AllDocuments", new { libraryTitle = Model.LibraryTitle, folderPath = Model.Path })
+        </td>
+    }
+    else
+    {
+        <td>@Html.DisplayFor(modelItem => Model.Name)</td>
+    }
+
+    <td>@Html.DisplayFor(modelItem => Model.Author)</td>
+    <td>@Html.DisplayFor(modelItem => Model.ModifiedBy)</td>
+    <td>@Html.DisplayFor(modelItem => Model.CreatedDate)</td>
+    <td>@Html.DisplayFor(modelItem => Model.ModifiedDate)</td>
+    <td>
+        @if (Model.ContentType == "Document")
+        {
+            if (Model.IsSharedWithGuest)
+            {
+                <a href="@Url.Action("DeleteLink", "Document", new { url = Model.FullUrl, libraryTitle = ViewBag.LibraryTitle, itemFolderUrl = Model.FolderUrl })" class="btn" title="Remove link">
+                    <i class="fa fa-chain-broken"></i>
+                </a>
+
+                @*@Ajax.ActionLink("Del", "DeleteLink2", new { item = Model }, 
+                new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    AllowCache = false,
+                    InsertionMode = InsertionMode.ReplaceWith,
+                    UpdateTargetId = "" + Model.Id
+                })*@
+            }
+            else
+            {
+                <a href="@Url.Action("AddLink", "Document", new { url = Model.FullUrl, libraryTitle = ViewBag.LibraryTitle, itemFolderUrl = Model.FolderUrl })" class="btn" title="Create link">
+                    <i class="fa fa-chain"></i>
+                </a>
+            }
+        }
+    </td>
+    <td>
+
+    </td>
+</tr>

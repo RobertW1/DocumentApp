@@ -22,3 +22,23 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.panel {
+    box-shadow: 0 0px 0px rgba(0,0,0,1)
+}
+
+
+.panel-default .panel-heading {
+    color: rgba(0, 114, 198, 1);
+    background-color: #FFFFFF;
+}
+
+
+.panel-default .panel-heading .panel-title {
+    padding-top: 8px;
+    font-size: 26px;
+}
+
+td a.btn {
+    padding: 0px;
+}

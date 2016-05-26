@@ -1,0 +1,24 @@
+﻿@model DocumentAppWeb.Models.ListItemVM
+
+<tr>
+    <td class="text-center"><img width="16" height="16" src="@Url.Content(Model.Icon)" title="@Model.FileName" /></td>
+    @if (Model.IsSharedWithGuest)
+    {
+        <td><a href="@(Model.EditLink ?? Model.ViewLink)" target="_blank">@Model.Name</a></td>
+    }
+    else if (Model.ContentType == "Folder")
+    {
+        <td>
+            @Html.ActionLink(Model.Name, "Details", new { libraryTitle = Model.LibraryTitle, folderPath = Model.Path })
+        </td>
+    }
+    else
+    {
+        <td>@Html.DisplayFor(modelItem => Model.Name)</td>
+    }
+
+    <td>@Html.DisplayFor(modelItem => Model.Author)</td>
+    <td>@Html.DisplayFor(modelItem => Model.ModifiedBy)</td>
+    <td>@Html.DisplayFor(modelItem => Model.CreatedDate)</td>
+    <td>@Html.DisplayFor(modelItem => Model.ModifiedDate)</td>
+</tr>
